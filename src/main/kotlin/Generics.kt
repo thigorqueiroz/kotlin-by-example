@@ -8,7 +8,8 @@ class MutableStack<T> (vararg items: T) {
     fun size() : Int = elements.size
     override fun toString(): String = "MutableStack(${elements.joinToString()})"
 }
-fun <T> mutableStackOf(vararg elements: T) = MutableStack(*elements) //spread operator = *elements
+fun <T> mutableStackOf(vararg elements: T) = MutableStack("thiago", *elements ) //spread operator = *elements
+
 fun main() {
     val stack = mutableStackOf("test", "3.14", 2.7)
     println(stack)
